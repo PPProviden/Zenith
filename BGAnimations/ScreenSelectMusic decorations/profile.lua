@@ -602,7 +602,7 @@ local function littlebits(i)
 		LoadFont("ZenithBold") ..
 			{
 				InitCommand = function(self)
-					self:y(22 * i - 50):maxwidth(170 * 2):halign(0):zoom(0.5):diffuse(getMainColor("positive"))
+					self:y(22 * i - 30):maxwidth(170 * 2):halign(0):zoom(0.47):diffuse(getMainColor("positive"))
 				end,
 				SetCommand = function(self)
 					self:settext(ms.SkillSets[i] .. ":")
@@ -611,7 +611,7 @@ local function littlebits(i)
 		LoadFont("ZenithBold") ..
 			{
 			InitCommand = function(self)
-				self:xy(frameX + 43, frameY - 138 ):halign(0):zoom(0.65):diffuse(getMainColor("positive"))
+				self:xy(frameX + 53, frameY - 128 ):halign(0):zoom(0.65):diffuse(getMainColor("positive"))
 			end,
 			SetCommand = function(self)
 				self:settextf("%s: %5.2f", profileName, playerRating)
@@ -620,7 +620,7 @@ local function littlebits(i)
 		LoadFont("ZenithBold") ..
 			{
 			InitCommand = function(self)
-				self:xy(frameX + 43, frameY - 121 ):halign(0):zoom(0.65):diffuse(getMainColor("positive"))
+				self:xy(frameX + 53, frameY - 108 ):halign(0):zoom(0.47):diffuse(getMainColor("positive"))
 			end,
 			SetCommand = function(self)
 				self:settextf("Plays: %s | Arrows Smashed: %s", playCount, noteCount)
@@ -629,7 +629,7 @@ local function littlebits(i)
 			LoadFont("ZenithBold") ..
 		{
 			InitCommand = function(self)
-				self:xy(frameX + 43, frameY - 104):halign(0):zoom(0.65):diffuse(getMainColor("positive"))
+				self:xy(frameX + 53, frameY - 90):halign(0):zoom(0.47):diffuse(getMainColor("positive"))
 			end,
 			BeginCommand = function(self)
 				self:queuecommand("Set")
@@ -642,7 +642,7 @@ local function littlebits(i)
 		LoadFont("Common Large") ..
 			{
 				InitCommand = function(self)
-					self:xy(185, 22 * i - 50):halign(0):zoom(0.5)
+					self:xy(185, 22 * i - 30):halign(0):zoom(0.47)
 				end,
 				SetCommand = function(self)
 					local rating = 0
@@ -666,7 +666,7 @@ local function littlebits(i)
 	t[#t + 1] =
 	Def.Sprite {
 		InitCommand = function(self)
-			self:halign(0):valign(0):xy(PlayerFrameX - 13, PlayerFrameY - 500):draworder(1337)
+			self:halign(0):valign(0):xy(PlayerFrameX , PlayerFrameY - 490):draworder(1337)
 		end,
 		BeginCommand = function(self)
 			self:finishtweening()
